@@ -4,8 +4,8 @@ require File.expand_path('../lib/guidestar_client/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Nat Budin"]
   gem.email         = ["natbudin@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Client for GuideStar charity search API}
+  gem.summary       = %q{GuideStar charity search client}
   gem.homepage      = ""
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
