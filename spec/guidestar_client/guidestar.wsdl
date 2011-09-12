@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://gsservices.guidestar.org" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="https://gsservices.guidestar.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://gsservices.guidestar.org">
+      <s:element name="GuideStarBasic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuideStarBasicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuideStarBasicResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuideStarDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuideStarDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuideStarDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuideStarCharityCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuideStarCharityCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuideStarCharityCheckResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuideStarNPOValidation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlInput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuideStarNPOValidationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuideStarNPOValidationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GuideStarBasicSoapIn">
+    <wsdl:part name="parameters" element="tns:GuideStarBasic" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarBasicSoapOut">
+    <wsdl:part name="parameters" element="tns:GuideStarBasicResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GuideStarDetail" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GuideStarDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarCharityCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:GuideStarCharityCheck" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarCharityCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:GuideStarCharityCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarNPOValidationSoapIn">
+    <wsdl:part name="parameters" element="tns:GuideStarNPOValidation" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarNPOValidationSoapOut">
+    <wsdl:part name="parameters" element="tns:GuideStarNPOValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarBasicHttpGetIn">
+    <wsdl:part name="xmlInput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarBasicHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarDetailHttpGetIn">
+    <wsdl:part name="xmlInput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarDetailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarCharityCheckHttpGetIn">
+    <wsdl:part name="xmlInput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarCharityCheckHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarNPOValidationHttpGetIn">
+    <wsdl:part name="xmlInput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarNPOValidationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarBasicHttpPostIn">
+    <wsdl:part name="xmlInput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarBasicHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarDetailHttpPostIn">
+    <wsdl:part name="xmlInput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarDetailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarCharityCheckHttpPostIn">
+    <wsdl:part name="xmlInput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarCharityCheckHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarNPOValidationHttpPostIn">
+    <wsdl:part name="xmlInput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GuideStarNPOValidationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="SearchServiceSoap">
+    <wsdl:operation name="GuideStarBasic">
+      <wsdl:input message="tns:GuideStarBasicSoapIn" />
+      <wsdl:output message="tns:GuideStarBasicSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarDetail">
+      <wsdl:input message="tns:GuideStarDetailSoapIn" />
+      <wsdl:output message="tns:GuideStarDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarCharityCheck">
+      <wsdl:input message="tns:GuideStarCharityCheckSoapIn" />
+      <wsdl:output message="tns:GuideStarCharityCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarNPOValidation">
+      <wsdl:input message="tns:GuideStarNPOValidationSoapIn" />
+      <wsdl:output message="tns:GuideStarNPOValidationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SearchServiceHttpGet">
+    <wsdl:operation name="GuideStarBasic">
+      <wsdl:input message="tns:GuideStarBasicHttpGetIn" />
+      <wsdl:output message="tns:GuideStarBasicHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarDetail">
+      <wsdl:input message="tns:GuideStarDetailHttpGetIn" />
+      <wsdl:output message="tns:GuideStarDetailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarCharityCheck">
+      <wsdl:input message="tns:GuideStarCharityCheckHttpGetIn" />
+      <wsdl:output message="tns:GuideStarCharityCheckHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarNPOValidation">
+      <wsdl:input message="tns:GuideStarNPOValidationHttpGetIn" />
+      <wsdl:output message="tns:GuideStarNPOValidationHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SearchServiceHttpPost">
+    <wsdl:operation name="GuideStarBasic">
+      <wsdl:input message="tns:GuideStarBasicHttpPostIn" />
+      <wsdl:output message="tns:GuideStarBasicHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarDetail">
+      <wsdl:input message="tns:GuideStarDetailHttpPostIn" />
+      <wsdl:output message="tns:GuideStarDetailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarCharityCheck">
+      <wsdl:input message="tns:GuideStarCharityCheckHttpPostIn" />
+      <wsdl:output message="tns:GuideStarCharityCheckHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarNPOValidation">
+      <wsdl:input message="tns:GuideStarNPOValidationHttpPostIn" />
+      <wsdl:output message="tns:GuideStarNPOValidationHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SearchServiceSoap" type="tns:SearchServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GuideStarBasic">
+      <soap:operation soapAction="https://gsservices.guidestar.org/GuideStarBasic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarDetail">
+      <soap:operation soapAction="https://gsservices.guidestar.org/GuideStarDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarCharityCheck">
+      <soap:operation soapAction="https://gsservices.guidestar.org/GuideStarCharityCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarNPOValidation">
+      <soap:operation soapAction="https://gsservices.guidestar.org/GuideStarNPOValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SearchServiceSoap12" type="tns:SearchServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GuideStarBasic">
+      <soap12:operation soapAction="https://gsservices.guidestar.org/GuideStarBasic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarDetail">
+      <soap12:operation soapAction="https://gsservices.guidestar.org/GuideStarDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarCharityCheck">
+      <soap12:operation soapAction="https://gsservices.guidestar.org/GuideStarCharityCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarNPOValidation">
+      <soap12:operation soapAction="https://gsservices.guidestar.org/GuideStarNPOValidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SearchServiceHttpGet" type="tns:SearchServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GuideStarBasic">
+      <http:operation location="/GuideStarBasic" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarDetail">
+      <http:operation location="/GuideStarDetail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarCharityCheck">
+      <http:operation location="/GuideStarCharityCheck" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarNPOValidation">
+      <http:operation location="/GuideStarNPOValidation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SearchServiceHttpPost" type="tns:SearchServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GuideStarBasic">
+      <http:operation location="/GuideStarBasic" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarDetail">
+      <http:operation location="/GuideStarDetail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarCharityCheck">
+      <http:operation location="/GuideStarCharityCheck" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuideStarNPOValidation">
+      <http:operation location="/GuideStarNPOValidation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SearchService">
+    <wsdl:port name="SearchServiceSoap" binding="tns:SearchServiceSoap">
+      <soap:address location="https://gsservices.guidestar.org/GuideStar_SearchService/SearchService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SearchServiceSoap12" binding="tns:SearchServiceSoap12">
+      <soap12:address location="https://gsservices.guidestar.org/GuideStar_SearchService/SearchService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SearchServiceHttpGet" binding="tns:SearchServiceHttpGet">
+      <http:address location="https://gsservices.guidestar.org/GuideStar_SearchService/SearchService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SearchServiceHttpPost" binding="tns:SearchServiceHttpPost">
+      <http:address location="https://gsservices.guidestar.org/GuideStar_SearchService/SearchService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
