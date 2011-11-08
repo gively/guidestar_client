@@ -54,17 +54,26 @@ module GuidestarClient
 #      }
     }
     
-    attr_reader :client, :query_options
+    attr_reader :client, :query_options, :result_count
     
     def initialize(client, query_options)
       @client = client
       @query_options = query_options
+      @result_count = 0
     end
     
     def each_record
+      @result_count = 0
       client.query_each(query_options) do |organization|
+        @result_count += 1
         yield charity_data_from_xml(organization)
       end
+    end
+    
+    # GuideStar returns a max of 1000 charities per query.  If we get 1000, we don't know
+    # that our result is complete.
+    def complete_result?
+      @result_count < 1000
     end
     
     def timestamp_column_name
