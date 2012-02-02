@@ -35,7 +35,6 @@ module GuidestarClient
         "irsSubsection"  => :irs_subsection,
         "url"            => :url,
         "worldLocations" => :world_locations,
-        "description"    => :description,
         "aka"            => :aka,
         "deductibility"  => :deductibility,
         "usaLocations"   => :usa_locations,
